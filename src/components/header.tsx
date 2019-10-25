@@ -1,11 +1,11 @@
 import { Link } from "gatsby"
-import React, { ReactNode } from "react"
+import React, { ReactElement } from "react"
 
 interface Props {
   siteTitle: string
 }
 
-const Header = ({ siteTitle }: Props): ReactNode => (
+const Header = ({ siteTitle }: Props): ReactElement => (
   <header
     style={{
       background: `rebeccapurple`,

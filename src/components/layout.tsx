@@ -8,7 +8,8 @@
 import React, { ReactNode, ReactElement } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
-import "./layout.css"
+import "./../styles/layout.css"
+import "./../styles/index.scss"
 
 
 interface Props {

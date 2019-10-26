@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./../styles/layout.css"
 import "./../styles/index.scss"
+import layoutStyles from "./../styles/layout.module.scss"
 
 
 interface Props {
@@ -34,17 +35,18 @@ const Layout = ({ children } : Props): ReactElement => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
+          padding: `0 auto`,
           paddingTop: 0,
         }}
+        className={layoutStyles.container}
       >
         <main>{children}</main>
-        <footer>
+      </div>
+      <footer className={layoutStyles.content}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
     </>
   )
 }

@@ -1,0 +1,13 @@
+.container {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 1.0875rem - 26.100px);
+}
+
+.content{
+    flex-grow: 1;
+}

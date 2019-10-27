@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `LP`,
     description: `Luiz Carneiro Gama personal website`,
-    author: `@luizdotpro`,
+    author: `Luiz Carneiro @luizdotpro`,
   },
   plugins: [
     `gatsby-plugin-sass`,

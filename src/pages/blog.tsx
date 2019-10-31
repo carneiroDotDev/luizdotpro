@@ -10,6 +10,9 @@ interface Edge {
       title: string,
       createdAt: string
     }
+    fields: {
+      slug: string
+    }
   }
 }
 
@@ -20,6 +23,9 @@ const Blog = () => {
     allMarkdownRemark {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             createdAt
@@ -42,8 +48,10 @@ const Blog = () => {
       <ol>
         {data.allMarkdownRemark.edges.map((edge: Edge, index: number) => (
           <li key={index}>
+            <Link to={`/blog/${edge.node.fields.slug}`}>
             <h2>{edge.node.frontmatter.title}</h2>
             <p>{edge.node.frontmatter.createdAt}</p>
+            </Link>
           </li>
         ))}
       </ol>

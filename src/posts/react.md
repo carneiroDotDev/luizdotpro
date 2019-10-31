@@ -3,7 +3,7 @@ title: 'Hello React'
 createdAt: "2019-04-20 19:16"
 ---
 
-Hello world!
+React md post.
 
 This is my first blog post.
 

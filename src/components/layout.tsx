@@ -11,6 +11,7 @@ import Header from "./header"
 import "./../styles/layout.css"
 import "./../styles/index.scss"
 import layoutStyles from "./../styles/layout.module.scss"
+import footerStyles from "./../styles/footer.module.scss"
 
 
 interface Props {
@@ -42,7 +43,7 @@ const Layout = ({ children } : Props): ReactElement => {
       >
         <main>{children}</main>
       </div>
-      <footer className={layoutStyles.content}>
+      <footer className={`${layoutStyles.content} ${footerStyles.footer}`}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

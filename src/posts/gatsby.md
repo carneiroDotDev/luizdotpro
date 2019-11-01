@@ -7,6 +7,8 @@ Hello world!
 
 This is my first blog post.
 
+![Gatsby-icon](../images/gatsby-icon.png)
+
 ## Topics
 
 1. Gatsby

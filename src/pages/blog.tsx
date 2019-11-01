@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import blogStyles from "../styles/blog.module.scss"
 
 interface Edge {
   node: {
@@ -45,9 +46,9 @@ const Blog = () => {
       <p>Welcome to blog</p>
       <Link to="/">Go back to the homepage</Link>
 
-      <ol>
+      <ol className={blogStyles.posts}>
         {data.allMarkdownRemark.edges.map((edge: Edge, index: number) => (
-          <li key={index}>
+          <li key={index} className={blogStyles.post}>
             <Link to={`/blog/${edge.node.fields.slug}`}>
             <h2>{edge.node.frontmatter.title}</h2>
             <p>{edge.node.frontmatter.createdAt}</p>

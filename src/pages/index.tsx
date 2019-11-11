@@ -9,7 +9,7 @@ import Head from "../components/Head"
 const IndexPage = (): ReactElement => (
   <Layout>
     <SEO title="Home" description="" lang="" meta={[{ name: "", content: ""}]}></SEO>
-    <Head />
+    <Head title="Sopinha"/>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>

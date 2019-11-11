@@ -3,6 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Node } from "@contentful/rich-text-types"
   
 export const data = graphql`
 query ($slug: String!){
@@ -19,7 +20,7 @@ const Blog = (props: any): ReactElement => {
 
   const options = {
     renderNode: {
-      "embedded-asset-block": node => {
+      "embedded-asset-block": (node: Node) => {
         const alt = node.data.target.fields.title['en-US']
         const url = node.data.target.fields.file["en-US"].url
         return <img alt={alt} src={url} />

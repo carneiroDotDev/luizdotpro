@@ -45,8 +45,8 @@ const Blog = () => {
         {data.allContentfulBlogPost.edges.map((edge: Edge, index: number) => (
           <li key={index} className={blogStyles.post}>
             <Link to={`/blog/${edge.node.slug}`}>
-            <h2>{edge.node.title}</h2>
-            <p>{edge.node.publishedDate}</p>
+              <h2>{edge.node.title}</h2>
+              <p>{edge.node.publishedDate}</p>
             </Link>
           </li>
         ))}

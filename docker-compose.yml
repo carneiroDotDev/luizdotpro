@@ -1,0 +1,15 @@
+version: '3.6'
+
+networks:
+  default:
+    external: true
+    name: dev
+
+services:
+  frontend:
+     build: .
+
+  config:
+    image: master:latest
+    ports:
+      - "8888:8888"

@@ -27,24 +27,31 @@
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "@types/react-helmet": "^5.0.13",
-    "@typescript-eslint/eslint-plugin": "^2.6.1",
-    "@typescript-eslint/parser": "^2.6.1",
+    "@typescript-eslint/eslint-plugin": "2.6.1",
+    "@typescript-eslint/parser": "2.6.1",
     "env-cmd": "^10.0.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "gatsby-plugin-sass": "^2.1.20",
     "gatsby-source-contentful": "^2.1.55",
     "gatsby-transformer-remark": "^2.6.31",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.3",
     "node-sass": "^4.13.0",
     "prettier": "^1.18.2",
-    "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0"
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
+    "type-check": "tsc",
     "build": "tsc --project tsconfig.json && env-cmd -f .env gatsby build",
     "develop": "gatsby develop",
     "gatsby-play": "env-cmd -f .env gatsby develop",
@@ -52,6 +59,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0"
+    "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0 --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --max-warnings=10 --fix"
   }
 }

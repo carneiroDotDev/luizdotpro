@@ -1,15 +1,16 @@
-version: '3.6'
-
-networks:
-  default:
-    external: true
-    name: dev
-
+version: '3'
 services:
-  frontend:
-     build: .
-
-  config:
-    image: master:latest
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
-      - "8888:8888"
+      - "2000:8000"
+      - "2929:9929"
+      - "2230:9230"
+    volumes:
+      - /app/node_modules
+      - .:/app
+    environment:
+      - NODE_ENV=development
+      - GATSBY_WEBPACK_PUBLICPATH=/

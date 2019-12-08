@@ -17,11 +17,11 @@ export const data = graphql`
     }
 `
 
-const Blog = (props: any): ReactElement => {
+const Blog = (props: Node): ReactElement => {
     const options = {
         renderNode: {
             // eslint-disable-next-line react/display-name
-            'embedded-asset-block': (node: Node) => {
+            'embedded-asset-block': (node: Node): ReactElement => {
                 const alt = node.data.target.fields.title['en-US']
                 const url = node.data.target.fields.file['en-US'].url
                 return <img alt={alt} src={url} />

@@ -60,6 +60,6 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0 --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --max-warnings=10 --fix"
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0 --fix"
   }
 }

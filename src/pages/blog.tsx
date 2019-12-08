@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -13,7 +13,7 @@ interface Edge {
     }
 }
 
-const Blog = () => {
+const Blog = (): ReactElement => {
     const data = useStaticQuery(graphql`
         query {
             allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {

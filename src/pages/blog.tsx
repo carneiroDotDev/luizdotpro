@@ -28,8 +28,6 @@ const Blog = (): ReactElement => {
         }
     `)
 
-    // console.log(data.allMarkdownRemark.edges)
-
     return (
         <Layout>
             <SEO title="Page two" description="" lang="" meta={[{ name: '', content: '' }]} />

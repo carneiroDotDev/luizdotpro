@@ -14,7 +14,8 @@ const IndexPage = (): ReactElement => (
     //   <Link to="/blog/">Go to Blog</Link>
     // </Layout>
     <div className={mainStyles.bigContainer}>
-        <h1>Luiz.pro</h1>
+        <img src="/carneiroEmoji.png" alt="Logo" width="30%" height="30%" />
+        <h1>carneiro.dev</h1>
         <p> Chill, its comming.</p>
     </div>
 )

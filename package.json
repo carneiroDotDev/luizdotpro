@@ -3,7 +3,7 @@
   "private": true,
   "description": "My personal page",
   "version": "1.0.0",
-  "author": "Luiz Carneiro <mail@luiz.pro>",
+  "author": "Luiz Carneiro <luiz@carneiro.dev>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "gatsby": "^2.18.7",
@@ -47,7 +47,7 @@
     "webpack-cli": "^3.3.10"
   },
   "keywords": [
-    "gatsby"
+    "gatsby", "Luiz Carneiro", "Blog"
   ],
   "license": "MIT",
   "scripts": {

@@ -2,11 +2,11 @@ import { Link } from 'gatsby'
 import React, { ReactElement } from 'react'
 import headerStyles from './../styles/header.module.scss'
 
-interface Props {
-    siteTitle: string
-}
+// interface Props {
+//     siteTitle: string
+// }
 
-const Header = ({ siteTitle }: Props): ReactElement => (
+const Header = (): ReactElement => (
     <header
         style={{
             background: `rebeccapurple`,
@@ -14,23 +14,10 @@ const Header = ({ siteTitle }: Props): ReactElement => (
         }}
         className={headerStyles.header}
     >
-        <div
-            style={{
-                margin: `0 auto`,
-                maxWidth: 960,
-                padding: `1.45rem 1.0875rem`,
-            }}
-        >
+        <div>
             <h1 style={{ margin: 0 }}>
-                <Link
-                    to="/"
-                    style={{
-                        color: `white`,
-                        textDecoration: `none`,
-                    }}
-                    className={headerStyles.title}
-                >
-                    {siteTitle}
+                <Link to="/" className={headerStyles.title}>
+                    LC
                 </Link>
             </h1>
             <ul className={headerStyles.navList}>
@@ -40,8 +27,7 @@ const Header = ({ siteTitle }: Props): ReactElement => (
                         activeClassName={headerStyles.activeNavItem}
                         to="/"
                     >
-                        {' '}
-                        Home{' '}
+                        Home
                     </Link>
                 </li>
                 <li>
@@ -50,8 +36,7 @@ const Header = ({ siteTitle }: Props): ReactElement => (
                         activeClassName={headerStyles.activeNavItem}
                         to="/blog"
                     >
-                        {' '}
-                        Blog{' '}
+                        Blog
                     </Link>
                 </li>
                 <li>
@@ -60,8 +45,7 @@ const Header = ({ siteTitle }: Props): ReactElement => (
                         activeClassName={headerStyles.activeNavItem}
                         to="/about"
                     >
-                        {' '}
-                        About{' '}
+                        About
                     </Link>
                 </li>
                 <li>
@@ -70,8 +54,7 @@ const Header = ({ siteTitle }: Props): ReactElement => (
                         activeClassName={headerStyles.activeNavItem}
                         to="/contact"
                     >
-                        {' '}
-                        Contact{' '}
+                        Contact
                     </Link>
                 </li>
             </ul>

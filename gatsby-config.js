@@ -3,8 +3,8 @@
 module.exports = {
     siteMetadata: {
         title: `LP`,
-        description: `Luiz Carneiro Gama personal website`,
-        author: `Luiz Carneiro @luizdotpro`,
+        description: `Luiz Carneiro Gama personal blog`,
+        author: `Luiz Carneiro @carneiroDotDev`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -43,7 +43,7 @@ module.exports = {
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
-                icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+                icon: `static/ram-emoji.png`, // This path is relative to the project's root.
             },
         },
         'gatsby-plugin-typescript',
@@ -63,6 +63,34 @@ module.exports = {
                 ],
             },
         },
+        // {
+        //     resolve: `gatsby-plugin-prefetch-google-fonts`,
+        //     options: {
+        //         fonts: [
+        //             {
+        //                 family: `Roboto Mono`,
+        //                 variants: [`300`, `400`, `500`, `700`]
+        //             },
+        //             {
+        //                 family: `Roboto`,
+        //                 subsets: [`latin`]
+        //             },
+        //         ],
+        //     },
+        // },
+        {
+            resolve: 'gatsby-plugin-material-ui',
+            // If you want to use styled components you should change the injection order.
+            options: {
+                // stylesProvider: {
+                //   injectFirst: true,
+                // },
+            },
+        },
+        `gatsby-plugin-layout`
+        // If you want to use styled components you should add the plugin here.
+        // 'gatsby-plugin-styled-components',
+        //
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
